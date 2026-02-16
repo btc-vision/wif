@@ -1,11 +1,36 @@
 {
-    "extends": "./tsconfig.base.json",
     "compilerOptions": {
-      "outDir": "src/esm",
-      "esModuleInterop": true,
-      "resolveJsonModule": true,
-      "module": "ESNext",
-      "moduleResolution": "Node"
+        "module": "ESNext",
+        "target": "ESNext",
+        "declaration": true,
+        "outDir": "./build",
+        "moduleResolution": "bundler",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "moduleDetection": "force",
+        "sourceMap": false,
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictBindCallApply": true,
+        "strictPropertyInitialization": true,
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "removeComments": true,
+        "lib": [
+            "ESNext"
+        ]
     },
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "build",
+        "test"
+    ]
 }
-  
